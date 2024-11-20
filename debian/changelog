@@ -1,5 +1,51 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-barcode (1.0.1-1) unstable; urgency=medium
 
-  * Initial release
+  [ Debian Janitor (Jelmer Vernooĳ) ]
+  * Orphan package - see bug 836493. Move orphaned package to the QA team
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+  [ Anthony Fok ]
+  * New upstream version 1.0.1
+  * Add debian/watch
+  * debian/gbp.conf: Set debian-branch to debian/sid for DEP-14 conformance
+  * Update Maintainer email address to team+pkg-go@tracker.debian.org
+  * Adopt this package, and add myself to the list of Uploaders and to
+    debian/copyright (Closes: #836493)
+  * Add "Rules-Requires-Root: no" to debian/control
+  * Change Build-Depends: golang-go to golang-any
+  * Use dh-sequence-golang instead of dh-golang and --with=golang
+  * Add "Testsuite: autopkgtest-pkg-go" to debian/control
+  * Bump Standards-Version to 4.6.2 (no change)
+  * Drop -dev package’s unneeded dependency on ${shlibs:Depends}
+  * Reorder fields in debian/control and debian/copyright
+  * Invoke dh with --builddirectory=_build
+
+ -- Anthony Fok <foka@debian.org>  Thu, 26 Jan 2023 02:10:52 -0700
+
+golang-barcode (0.0~git20140830-3) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since buster:
+    + Build-Depends: Drop versioned constraint on golang-go.
+  * Bump debhelper from old 12 to 13.
+  * Remove overrides for lintian tags that are no longer supported.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Fri, 01 Jul 2022 00:17:36 +0100
+
+golang-barcode (0.0~git20140830-2) unstable; urgency=medium
+
+  * Fix Maintainer spelling, add myself to Uploaders
+  * Fix Vcs-* tags
+  * Switch to XS-Go-Import-Path
+  * Use secure Homepage URL
+  * Use secure copyright URL
+
+ -- Michael Stapelberg <stapelberg@debian.org>  Thu, 08 Feb 2018 09:09:02 +0100
+
+golang-barcode (0.0~git20140830-1) unstable; urgency=low
+
+  * Initial release. Closes: #759749
+
+ -- Tonnerre Lombard <tonnerre@ancient-solutions.com>  Sat, 30 Aug 2014 00:16:06 +0200
